@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>scroll top</title>
+    <style>
+    .scrolltop {
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        display: none;
+    }
+    .scrolltop img{
+        width: 100%;
+    }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Top of the page</h1>
+    <article style="height: 1000px">
+        <p style="margin-bottom: 600px">Scroll down the page</p>
+        <a href="#" class="scrolltop"><img src="./rocket.png"></a>
+    </article>
+</body>
+<script>
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('.scrolltop').fadeIn();
+        } else {
+            $('.scrolltop').fadeOut();
+        }
+    })
+    $('.scrolltop').click(function() {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 600);
+        return false
+    })
+
+});
+</script>
+
+</html>
