@@ -1,0 +1,12 @@
+.scrolltop {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+}
+
+.scrolltop img {
+    width: 100%;
+}
