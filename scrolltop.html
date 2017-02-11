@@ -14,24 +14,6 @@
         <p style="margin-bottom: 600px">Scroll down the page</p>
         <a href="#" class="scrolltop"><img src="./rocket.png"></a>
     </article>
-</body>
-<script>
-$(document).ready(function() {
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            $('.scrolltop').fadeIn();
-        } else {
-            $('.scrolltop').fadeOut();
-        }
-    })
-    $('.scrolltop').click(function() {
-        $('html,body').animate({
-            scrollTop: 0
-        }, 600);
-        return false
-    })
-
-});
-</script>
+<script type="text/javascript" src="./scrolltop.js"></script>
 
 </html>
